@@ -1,24 +1,625 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TWu-qN-q1N">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Coat Room-->
+        <scene sceneID="62p-Il-Adz">
+            <objects>
+                <viewController id="6Vw-XA-mI6" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYN-j5-HYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coat_room" translatesAutoresizingMaskIntoConstraints="NO" id="FTL-uA-Dlj">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FTL-uA-Dlj" secondAttribute="height" id="pW0-PS-XUV"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5MB-D5-de7">
+                                <rect key="frame" x="0.0" y="562" width="414" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WYt-yv-VR1">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <state key="normal" title="Library"/>
+                                        <connections>
+                                            <segue destination="9xu-8b-AoD" kind="show" id="PMq-WH-uW1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YI5-UT-dtx">
+                                        <rect key="frame" x="0.0" y="38" width="414" height="30"/>
+                                        <state key="normal" title="Stairs Up"/>
+                                        <connections>
+                                            <segue destination="Ee2-yY-1Ak" kind="show" id="Wl3-5S-alw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZC-iD-yLU">
+                                        <rect key="frame" x="0.0" y="76" width="414" height="30"/>
+                                        <state key="normal" title="Dining Room"/>
+                                        <connections>
+                                            <segue destination="XcY-fy-FaS" kind="show" id="pKh-di-rlO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vgr-Ku-GA5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5MB-D5-de7" firstAttribute="top" secondItem="FTL-uA-Dlj" secondAttribute="bottom" constant="8" id="2eG-CM-WvU"/>
+                            <constraint firstItem="FTL-uA-Dlj" firstAttribute="top" secondItem="vgr-Ku-GA5" secondAttribute="top" id="34Z-rr-cqm"/>
+                            <constraint firstItem="FTL-uA-Dlj" firstAttribute="leading" secondItem="vgr-Ku-GA5" secondAttribute="leading" id="GZK-Vd-4CC"/>
+                            <constraint firstItem="vgr-Ku-GA5" firstAttribute="trailing" secondItem="5MB-D5-de7" secondAttribute="trailing" id="YhV-5g-9DM"/>
+                            <constraint firstItem="5MB-D5-de7" firstAttribute="leading" secondItem="vgr-Ku-GA5" secondAttribute="leading" id="iwt-FY-2CA"/>
+                            <constraint firstItem="vgr-Ku-GA5" firstAttribute="trailing" secondItem="FTL-uA-Dlj" secondAttribute="trailing" id="lf2-7l-FTx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Coat Room" id="kPr-oQ-H5o"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amt-9l-pgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="867" y="-58"/>
+        </scene>
+        <!--Front Door-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="front_door" translatesAutoresizingMaskIntoConstraints="NO" id="02f-Qn-7jO">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="02f-Qn-7jO" secondAttribute="height" id="E2V-xb-far"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tp6-Op-BSt">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Coat Room"/>
+                                <connections>
+                                    <segue destination="6Vw-XA-mI6" kind="show" id="iO2-Gw-zLg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="02f-Qn-7jO" secondAttribute="trailing" id="A1g-4d-1vK"/>
+                            <constraint firstItem="02f-Qn-7jO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Esq-Jb-sDO"/>
+                            <constraint firstItem="02f-Qn-7jO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XRL-8i-xPB"/>
+                            <constraint firstItem="tp6-Op-BSt" firstAttribute="top" secondItem="02f-Qn-7jO" secondAttribute="bottom" constant="24" id="a05-GW-IVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tp6-Op-BSt" secondAttribute="trailing" id="pM0-8P-s0P"/>
+                            <constraint firstItem="tp6-Op-BSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qWn-PZ-Y9R"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Front Door" id="5nn-18-PRc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="868" y="-731"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ePe-Lv-bue">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TWu-qN-q1N" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Fcl-sE-OlE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uoS-sk-TzQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JY4-VI-8II" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197" y="-731"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="bhL-aK-t4V">
+            <objects>
+                <viewController id="9xu-8b-AoD" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bat-Xm-MJv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="library" translatesAutoresizingMaskIntoConstraints="NO" id="qfK-jY-7Ha">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qfK-jY-7Ha" secondAttribute="height" id="LUr-Ed-4z9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsh-0o-8dV">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Secret Passage"/>
+                                <connections>
+                                    <segue destination="h0r-Jn-TiM" kind="show" id="cUE-O6-zfX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YNa-pq-opD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qfK-jY-7Ha" firstAttribute="top" secondItem="YNa-pq-opD" secondAttribute="top" id="4EF-9O-5B6"/>
+                            <constraint firstItem="YNa-pq-opD" firstAttribute="trailing" secondItem="qfK-jY-7Ha" secondAttribute="trailing" id="CYx-w5-BHp"/>
+                            <constraint firstItem="Dsh-0o-8dV" firstAttribute="leading" secondItem="YNa-pq-opD" secondAttribute="leading" id="GT0-eS-b7W"/>
+                            <constraint firstItem="qfK-jY-7Ha" firstAttribute="leading" secondItem="YNa-pq-opD" secondAttribute="leading" id="L1c-cy-0he"/>
+                            <constraint firstItem="Dsh-0o-8dV" firstAttribute="top" secondItem="qfK-jY-7Ha" secondAttribute="bottom" constant="24" id="T8b-yG-kc2"/>
+                            <constraint firstItem="YNa-pq-opD" firstAttribute="trailing" secondItem="Dsh-0o-8dV" secondAttribute="trailing" id="x5e-tL-8Yf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Library" id="IRr-Sy-1Wg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhv-1q-ob1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="647"/>
+        </scene>
+        <!--Dining Room-->
+        <scene sceneID="jHc-qr-4qe">
+            <objects>
+                <viewController id="XcY-fy-FaS" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fdV-Ua-PYl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dining_room" translatesAutoresizingMaskIntoConstraints="NO" id="YE9-RS-O6O">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YE9-RS-O6O" secondAttribute="height" id="oOg-ex-0pp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0S-oT-Xhe">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Kitchen"/>
+                                <connections>
+                                    <segue destination="vS0-uR-DH4" kind="show" id="gCj-JG-UUo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4Sn-c2-g8S"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Sn-c2-g8S" firstAttribute="trailing" secondItem="YE9-RS-O6O" secondAttribute="trailing" id="2kh-h1-Mhf"/>
+                            <constraint firstItem="V0S-oT-Xhe" firstAttribute="leading" secondItem="4Sn-c2-g8S" secondAttribute="leading" id="6ae-tI-gEh"/>
+                            <constraint firstItem="YE9-RS-O6O" firstAttribute="top" secondItem="4Sn-c2-g8S" secondAttribute="top" id="Udc-vW-lfV"/>
+                            <constraint firstItem="V0S-oT-Xhe" firstAttribute="top" secondItem="YE9-RS-O6O" secondAttribute="bottom" constant="24" id="elm-4X-5R8"/>
+                            <constraint firstItem="4Sn-c2-g8S" firstAttribute="trailing" secondItem="V0S-oT-Xhe" secondAttribute="trailing" id="mro-K1-tKS"/>
+                            <constraint firstItem="YE9-RS-O6O" firstAttribute="leading" secondItem="4Sn-c2-g8S" secondAttribute="leading" id="sIc-JV-DpB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dining Room" id="Bxz-hd-RFo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Uy-DZ-qgf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="647"/>
+        </scene>
+        <!--Stairs Up-->
+        <scene sceneID="2Ac-2g-Mqa">
+            <objects>
+                <viewController id="Ee2-yY-1Ak" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1eB-io-Cqy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stairs_up" translatesAutoresizingMaskIntoConstraints="NO" id="6KG-v4-ESM">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6KG-v4-ESM" secondAttribute="height" id="tYR-dj-EZo"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W5O-gD-43r">
+                                <rect key="frame" x="0.0" y="562" width="414" height="68"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QT-Ad-43n">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <state key="normal" title="Bedroom"/>
+                                        <connections>
+                                            <segue destination="FdC-Ha-Owe" kind="show" id="zwJ-BF-OLN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdd-WP-C83">
+                                        <rect key="frame" x="0.0" y="38" width="414" height="30"/>
+                                        <state key="normal" title="Bathroom"/>
+                                        <connections>
+                                            <segue destination="xWS-Yh-fIU" kind="show" id="POd-xX-Z5K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WrZ-YF-ePt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WrZ-YF-ePt" firstAttribute="trailing" secondItem="W5O-gD-43r" secondAttribute="trailing" id="06w-f0-hPN"/>
+                            <constraint firstItem="WrZ-YF-ePt" firstAttribute="trailing" secondItem="6KG-v4-ESM" secondAttribute="trailing" id="Mof-qO-BNb"/>
+                            <constraint firstItem="6KG-v4-ESM" firstAttribute="leading" secondItem="WrZ-YF-ePt" secondAttribute="leading" id="ObT-Ly-cHD"/>
+                            <constraint firstItem="6KG-v4-ESM" firstAttribute="top" secondItem="WrZ-YF-ePt" secondAttribute="top" id="U3Z-Qb-UQU"/>
+                            <constraint firstItem="W5O-gD-43r" firstAttribute="top" secondItem="6KG-v4-ESM" secondAttribute="bottom" constant="8" id="f1n-Si-D8M"/>
+                            <constraint firstItem="W5O-gD-43r" firstAttribute="leading" secondItem="WrZ-YF-ePt" secondAttribute="leading" id="qCR-s8-V5O"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stairs Up" id="sCo-sg-DyN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9K-Fc-cgm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="647"/>
+        </scene>
+        <!--Bedroom-->
+        <scene sceneID="sIf-3d-rtp">
+            <objects>
+                <viewController id="FdC-Ha-Owe" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNY-1X-vMP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bedroom" translatesAutoresizingMaskIntoConstraints="NO" id="Q4D-BH-fl0">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q4D-BH-fl0" secondAttribute="height" id="WG5-53-bWd"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dgw-47-Wr6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Q4D-BH-fl0" firstAttribute="top" secondItem="dgw-47-Wr6" secondAttribute="top" id="8aK-S9-ard"/>
+                            <constraint firstItem="Q4D-BH-fl0" firstAttribute="leading" secondItem="dgw-47-Wr6" secondAttribute="leading" id="Gd1-9Q-mWb"/>
+                            <constraint firstItem="dgw-47-Wr6" firstAttribute="trailing" secondItem="Q4D-BH-fl0" secondAttribute="trailing" id="eHi-kv-H5k"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bedroom" id="zq3-Uy-zeU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0U-Oe-GVk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1609" y="1318"/>
+        </scene>
+        <!--Bathroom-->
+        <scene sceneID="h4h-EG-YYJ">
+            <objects>
+                <viewController id="xWS-Yh-fIU" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GfX-CN-5Vs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bathroom" translatesAutoresizingMaskIntoConstraints="NO" id="6CP-WO-A3s">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6CP-WO-A3s" secondAttribute="height" id="1xQ-DF-w4g"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rce-qv-VAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rce-qv-VAI" firstAttribute="trailing" secondItem="6CP-WO-A3s" secondAttribute="trailing" id="JU2-Ih-wP7"/>
+                            <constraint firstItem="6CP-WO-A3s" firstAttribute="top" secondItem="Rce-qv-VAI" secondAttribute="top" id="MZT-2g-AhE"/>
+                            <constraint firstItem="6CP-WO-A3s" firstAttribute="leading" secondItem="Rce-qv-VAI" secondAttribute="leading" id="qbH-BS-Ih8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bathroom" id="J2q-VT-cBL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJG-wU-zLs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2348" y="1318"/>
+        </scene>
+        <!--Back porch-->
+        <scene sceneID="tiu-7s-5ox">
+            <objects>
+                <viewController id="tFi-BC-M81" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gvy-yd-SgX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_porch" translatesAutoresizingMaskIntoConstraints="NO" id="9Ml-Mw-AAv">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9Ml-Mw-AAv" secondAttribute="height" id="HEL-fX-3DA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vx7-TW-XGb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vx7-TW-XGb" firstAttribute="trailing" secondItem="9Ml-Mw-AAv" secondAttribute="trailing" id="a2C-dL-YsI"/>
+                            <constraint firstItem="9Ml-Mw-AAv" firstAttribute="leading" secondItem="Vx7-TW-XGb" secondAttribute="leading" id="rwW-ZF-Lue"/>
+                            <constraint firstItem="9Ml-Mw-AAv" firstAttribute="top" secondItem="Vx7-TW-XGb" secondAttribute="top" id="x0A-Vq-DxE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Back porch" id="owW-E4-iws"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcZ-hX-XNM" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="2010"/>
+        </scene>
+        <!--Kitchen-->
+        <scene sceneID="poc-7m-iPf">
+            <objects>
+                <viewController id="vS0-uR-DH4" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rox-58-UHy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="RcN-QB-gce">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RcN-QB-gce" secondAttribute="height" id="hrK-rp-jEa"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xY0-kI-5f8">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Back porch"/>
+                                <connections>
+                                    <segue destination="tFi-BC-M81" kind="show" id="p0a-cM-98b"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6bm-56-eN8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RcN-QB-gce" firstAttribute="leading" secondItem="6bm-56-eN8" secondAttribute="leading" id="6C8-fl-bgs"/>
+                            <constraint firstItem="xY0-kI-5f8" firstAttribute="leading" secondItem="6bm-56-eN8" secondAttribute="leading" id="K87-JU-AWh"/>
+                            <constraint firstItem="RcN-QB-gce" firstAttribute="top" secondItem="6bm-56-eN8" secondAttribute="top" id="Tnt-Vv-7gs"/>
+                            <constraint firstItem="xY0-kI-5f8" firstAttribute="top" secondItem="RcN-QB-gce" secondAttribute="bottom" constant="24" id="Zho-DH-Jba"/>
+                            <constraint firstItem="6bm-56-eN8" firstAttribute="trailing" secondItem="xY0-kI-5f8" secondAttribute="trailing" id="p3j-S9-gNc"/>
+                            <constraint firstItem="6bm-56-eN8" firstAttribute="trailing" secondItem="RcN-QB-gce" secondAttribute="trailing" id="pDb-gW-HA6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kitchen" id="pa3-lR-oGE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UyC-sx-tWF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="1318"/>
+        </scene>
+        <!--SEC Passage-->
+        <scene sceneID="50u-oY-9fE">
+            <objects>
+                <viewController id="h0r-Jn-TiM" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xTP-RK-Lwb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="secret_passage" translatesAutoresizingMaskIntoConstraints="NO" id="J6E-Wg-zoH">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J6E-Wg-zoH" secondAttribute="height" id="90a-Tr-HDN"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-f3-NrT">
+                                <rect key="frame" x="0.0" y="562" width="414" height="106"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbx-gV-HUe">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <state key="normal" title="Dungeon"/>
+                                        <connections>
+                                            <segue destination="3Lq-gM-elB" kind="show" id="Kai-xR-6gt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUF-Q6-qLH">
+                                        <rect key="frame" x="0.0" y="38" width="414" height="30"/>
+                                        <state key="normal" title="Labratory"/>
+                                        <connections>
+                                            <segue destination="6N9-rP-RXx" kind="show" id="n4G-Ne-6tu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ern-r4-xwj">
+                                        <rect key="frame" x="0.0" y="76" width="414" height="30"/>
+                                        <state key="normal" title="Mysterious lake"/>
+                                        <connections>
+                                            <segue destination="J29-9l-uC4" kind="show" id="kda-DY-po5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5bH-qI-Zgd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J6E-Wg-zoH" firstAttribute="top" secondItem="5bH-qI-Zgd" secondAttribute="top" id="BVF-bC-0Pb"/>
+                            <constraint firstItem="V3q-f3-NrT" firstAttribute="leading" secondItem="5bH-qI-Zgd" secondAttribute="leading" id="HJp-pv-jBQ"/>
+                            <constraint firstItem="J6E-Wg-zoH" firstAttribute="leading" secondItem="5bH-qI-Zgd" secondAttribute="leading" id="c2j-i2-VS9"/>
+                            <constraint firstItem="V3q-f3-NrT" firstAttribute="top" secondItem="J6E-Wg-zoH" secondAttribute="bottom" constant="8" id="crm-Mm-i8z"/>
+                            <constraint firstItem="5bH-qI-Zgd" firstAttribute="trailing" secondItem="V3q-f3-NrT" secondAttribute="trailing" id="sg2-8W-T6u"/>
+                            <constraint firstItem="5bH-qI-Zgd" firstAttribute="trailing" secondItem="J6E-Wg-zoH" secondAttribute="trailing" id="z0W-8p-cVV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="SEC Passage" id="Fn5-T9-yPb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XFh-K1-nwx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="1318"/>
+        </scene>
+        <!--Dungeon-->
+        <scene sceneID="xHe-wd-523">
+            <objects>
+                <viewController id="3Lq-gM-elB" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="euo-Pl-Jg9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dungeon" translatesAutoresizingMaskIntoConstraints="NO" id="31G-is-shy">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="31G-is-shy" secondAttribute="height" id="haV-xH-g0l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EzR-7a-i7W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="31G-is-shy" firstAttribute="top" secondItem="EzR-7a-i7W" secondAttribute="top" id="siy-6L-4wb"/>
+                            <constraint firstItem="EzR-7a-i7W" firstAttribute="trailing" secondItem="31G-is-shy" secondAttribute="trailing" id="wCq-k6-kIh"/>
+                            <constraint firstItem="31G-is-shy" firstAttribute="leading" secondItem="EzR-7a-i7W" secondAttribute="leading" id="ws5-eS-qyY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Dungeon" id="bjF-SQ-MZA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBK-GN-vPz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1214" y="2010"/>
+        </scene>
+        <!--Labratory-->
+        <scene sceneID="alR-oi-FCR">
+            <objects>
+                <viewController id="6N9-rP-RXx" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o3i-vj-LSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="labratory" translatesAutoresizingMaskIntoConstraints="NO" id="SSg-VY-X7s">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SSg-VY-X7s" secondAttribute="height" id="Pih-U3-ch9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPX-D9-cgv">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Generator"/>
+                                <connections>
+                                    <segue destination="BBk-wH-pts" kind="show" id="ilL-h0-dRq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="frz-Z4-BBN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SSg-VY-X7s" firstAttribute="top" secondItem="frz-Z4-BBN" secondAttribute="top" id="5w4-fT-sIC"/>
+                            <constraint firstItem="SSg-VY-X7s" firstAttribute="leading" secondItem="frz-Z4-BBN" secondAttribute="leading" id="QBT-JC-1RP"/>
+                            <constraint firstItem="frz-Z4-BBN" firstAttribute="trailing" secondItem="vPX-D9-cgv" secondAttribute="trailing" id="SF3-N4-Cd2"/>
+                            <constraint firstItem="vPX-D9-cgv" firstAttribute="top" secondItem="SSg-VY-X7s" secondAttribute="bottom" constant="24" id="TnN-Ux-8kt"/>
+                            <constraint firstItem="frz-Z4-BBN" firstAttribute="trailing" secondItem="SSg-VY-X7s" secondAttribute="trailing" id="a0c-d9-pBH"/>
+                            <constraint firstItem="vPX-D9-cgv" firstAttribute="leading" secondItem="frz-Z4-BBN" secondAttribute="leading" id="o7p-jj-8A6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Labratory" id="0Bi-4L-iPF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kYp-3k-5Ae" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="2010"/>
+        </scene>
+        <!--Generator-->
+        <scene sceneID="sJt-PX-eXu">
+            <objects>
+                <viewController id="BBk-wH-pts" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I78-ef-zH1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="generator" translatesAutoresizingMaskIntoConstraints="NO" id="zoi-Wo-pew">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zoi-Wo-pew" secondAttribute="height" id="yGL-Kr-y1s"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ktb-Rs-pgk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zoi-Wo-pew" firstAttribute="leading" secondItem="ktb-Rs-pgk" secondAttribute="leading" id="2vo-sV-kCX"/>
+                            <constraint firstItem="zoi-Wo-pew" firstAttribute="top" secondItem="ktb-Rs-pgk" secondAttribute="top" id="ZvJ-lf-I2z"/>
+                            <constraint firstItem="ktb-Rs-pgk" firstAttribute="trailing" secondItem="zoi-Wo-pew" secondAttribute="trailing" id="cTd-9d-YP4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Generator" id="Hjd-i3-fpe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QnR-Ha-le1" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-520" y="2681"/>
+        </scene>
+        <!--Myst. Lake-->
+        <scene sceneID="XTs-uL-EGp">
+            <objects>
+                <viewController id="J29-9l-uC4" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="39W-Q2-UHr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mysterious_lake" translatesAutoresizingMaskIntoConstraints="NO" id="vBk-PV-bo0">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vBk-PV-bo0" secondAttribute="height" id="uRg-yr-Onl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fs-mU-9yS">
+                                <rect key="frame" x="0.0" y="578" width="414" height="30"/>
+                                <state key="normal" title="Cursed chalice"/>
+                                <connections>
+                                    <segue destination="ZUc-u5-jtT" kind="show" id="Kbi-Wr-Vhn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0zc-db-K06"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vBk-PV-bo0" firstAttribute="leading" secondItem="0zc-db-K06" secondAttribute="leading" id="7ni-Ck-CCb"/>
+                            <constraint firstItem="6Fs-mU-9yS" firstAttribute="leading" secondItem="0zc-db-K06" secondAttribute="leading" id="FOP-hs-0Fa"/>
+                            <constraint firstItem="0zc-db-K06" firstAttribute="trailing" secondItem="6Fs-mU-9yS" secondAttribute="trailing" id="Jfw-l9-hSj"/>
+                            <constraint firstItem="0zc-db-K06" firstAttribute="trailing" secondItem="vBk-PV-bo0" secondAttribute="trailing" id="UdO-GB-wpf"/>
+                            <constraint firstItem="vBk-PV-bo0" firstAttribute="top" secondItem="0zc-db-K06" secondAttribute="top" id="jQU-wI-U3g"/>
+                            <constraint firstItem="6Fs-mU-9yS" firstAttribute="top" secondItem="vBk-PV-bo0" secondAttribute="bottom" constant="24" id="mrh-fM-MYG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Myst. Lake" id="pMV-rq-MKT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mhr-jc-tep" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="2010"/>
+        </scene>
+        <!--Cursed chalice-->
+        <scene sceneID="TPT-WT-tJ5">
+            <objects>
+                <viewController id="ZUc-u5-jtT" customClass="ViewController" customModule="Swift_Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbd-gi-BIe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cursed_chalice" translatesAutoresizingMaskIntoConstraints="NO" id="Czv-tY-fCD">
+                                <rect key="frame" x="0.0" y="140" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Czv-tY-fCD" secondAttribute="height" id="nbx-Rh-U2N"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Z5P-bt-drL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Czv-tY-fCD" firstAttribute="top" secondItem="Z5P-bt-drL" secondAttribute="top" id="3Ad-3c-Jhy"/>
+                            <constraint firstItem="Z5P-bt-drL" firstAttribute="trailing" secondItem="Czv-tY-fCD" secondAttribute="trailing" id="7Ju-NN-Ywg"/>
+                            <constraint firstItem="Czv-tY-fCD" firstAttribute="leading" secondItem="Z5P-bt-drL" secondAttribute="leading" id="rM9-Zc-Wsm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cursed chalice" id="KNa-2F-Kj2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S9-vr-4Tp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="196" y="2681"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back_porch" width="1024" height="1024"/>
+        <image name="bathroom" width="1024" height="1024"/>
+        <image name="bedroom" width="1024" height="1024"/>
+        <image name="coat_room" width="1024" height="1024"/>
+        <image name="cursed_chalice" width="1024" height="1024"/>
+        <image name="dining_room" width="1024" height="1024"/>
+        <image name="dungeon" width="1024" height="1024"/>
+        <image name="front_door" width="1024" height="1024"/>
+        <image name="generator" width="1024" height="1024"/>
+        <image name="kitchen" width="1024" height="1001"/>
+        <image name="labratory" width="1024" height="1024"/>
+        <image name="library" width="1024" height="1001"/>
+        <image name="mysterious_lake" width="1024" height="1024"/>
+        <image name="secret_passage" width="1024" height="1001"/>
+        <image name="stairs_up" width="1024" height="1001"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
